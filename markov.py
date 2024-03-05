@@ -43,7 +43,7 @@ def make_chains(text_string):
     chains = {}
     words = text_string.split()
 
-    for i in range(len(words) - 1):
+    for i in range(len(words) - 2):
         key = (words[i], words[i+1])
         if key in chains: 
             chains[key].append(words[i+2])
