@@ -59,7 +59,25 @@ def make_text(chains):
 
     words = []
 
-    # your code goes here
+    links = {}
+
+    for chain in chains:
+        for i in range(len(chain) - 2):
+            link = tuple(chain[i:i+2])
+
+            if link in links: 
+                links[link].append(chain{i+2})
+            else:
+                links[link] = [chain[i+2]]
+    #random_link
+    link = random.choice(list(links.keys()))
+
+    words.extend(link)
+    
+    while link in links:
+        next_word = random.choice(link[link])  
+        words.append(next_word)
+        
 
     return ' '.join(words)
 
